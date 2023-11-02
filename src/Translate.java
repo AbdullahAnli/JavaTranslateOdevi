@@ -10,9 +10,9 @@ public class Translate {
         Map<String, String> Sozluk = new HashMap<>();
         try {
             BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\Abdullah Anlı\\Desktop\\english-turkish.csv"));
-            String line;
-            while ((line = reader.readLine()) != null) {
-                String[] parts = line.split(",");
+            String Line;
+            while ((Line = reader.readLine()) != null) {
+                String[] parts = Line.split(",");
                 Sozluk.put(parts[0].toLowerCase(), parts[1]);
             }
             reader.close();
@@ -21,19 +21,19 @@ public class Translate {
         }
 
         Scanner input = new Scanner(System.in);
-        String kelime;
+        String Kelime;
         while (true) {
             System.out.print(" (Çıkmak için 'exit')\nÇevirmek istediğiniz kelimeyi girin :  ");
-            kelime = input.nextLine().toLowerCase();
+            Kelime = input.nextLine().toLowerCase();
 
-            if (kelime.equals("exit")) {
+            if (Kelime.equals("exit")) {
                 break;
             }
 
-            if (Sozluk.containsKey(kelime)) {
-                System.out.println("Çevirisi: " + Sozluk.get(kelime));
+            if (Sozluk.containsKey(Kelime)) {
+                System.out.println("Çevirisi: " + Sozluk.get(Kelime));
             } else {
-                System.out.println("kelime bulunamadı.");
+                System.out.println("Kelime bulunamadı.");
             }
         }
     }
