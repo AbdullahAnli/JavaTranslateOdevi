@@ -36,6 +36,5 @@ public class Translate {
                 System.out.println("kelime bulunamadı.");
             }
         }
-        input.close();
     }
 }
